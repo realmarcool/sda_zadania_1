@@ -1,9 +1,8 @@
 package com.company;
 
+import javax.sound.midi.Soundbank;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -193,7 +192,61 @@ public class Main {
             System.out.println(wyswietl);
         }
 
-        
+//      Zadanie 10
+//      Zadanie nieobowiązkowe - zakres tego programu będzie omawiany dopiero na kolejnych zajęciach.(Wskazówka wykorzystać zbiory)
+//
+//      Należy napisać program, który będzie pobierał Imiona od użytkownika dopóki użytkownik nie wpisze słowa “END”.
+//      Program w czasie rzeczywistym powinien weryfikować czy dane Imię już nie zostało niewpisane.
+//      Po wpisaniu słowa “END”:
+//      ● Wyświetl ilość wpisanych imion
+//      ● Wyświetl wszystkie elementy.
 
+        Set<String> imiona = new HashSet<>();
+        Scanner pobierz = new Scanner(System.in);
+        String imie;
+        System.out.println("--------------------------------------------");
+        System.out.println("Podaj imię lub napisz END aby zakończyć");
+        do {
+            imie = pobierz.nextLine();
+            if (!imie.equals("END")) {
+                imiona.add(imie);
+            }
+        }
+        while (!imie.equals("END"));
+        System.out.println("Liczba imion: " + imiona.size());
+        System.out.println("Lista imion:");
+        for (String wyswietl : imiona) {
+            System.out.print(wyswietl + ", ");
+        }
+
+//      Zadanie 11) -​ Zadanie nieobowiązkowe - zakres tego programu będzie omawiany dopiero na kolejnych zajęciach . ​
+
+//      Napisać program, który będzie przyjmował słowa, które są ​ palindromem(wyszukać w internecie co to jest).
+//      Jeżeli wpisane słowo nie jest palindromem, wyświetlić odpowiedni  komunikat na ekranie. Słowa w kontenerze nie mogą się powtarzać.
+//      Zależy mi w tym zadaniu abyście znaleźli różne metody, które pozwolą sprawdzić czy dane słowo jest palindromem(im więcej tym lepiej).
+//      Wpisywanie słów ma się zakończyć jeżeli wpiszemy słowo “END”.
+//      Po zakończeniu wpisywania wyświetlamy na ekranie wszystkie palindromy, które użytkownik wprowadził.
+
+        Set<String> slowa = new HashSet<>();
+        String slowo;
+        Palindrom palindrom = new Palindrom();
+        System.out.println("--------------------------------------------");
+        System.out.println("Podaj frazę lub napisz END aby zakończyć");
+        do {
+            slowo = pobierz.nextLine();
+            if (!slowo.equals("END")) {
+                if (palindrom.porownaj1(slowo)) {
+                    System.out.println("Fraza " + slowo + " jest palindromem");
+                    slowa.add(slowo);
+                } else {
+                    System.out.println("Fraza " + slowo + " nie jest palindromem");
+                }
+            }
+        }
+        while (!slowo.equals("END"));
+        System.out.println("Lista wszystkich wprowadzonych palindromów:");
+        for (String wyswietl : slowa) {
+            System.out.print(wyswietl + ", ");
+        }
     }
 }
