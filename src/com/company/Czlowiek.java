@@ -14,5 +14,15 @@ public class Czlowiek {
         this.nazwisko = nazwisko;
     }
 
+//  Zadanie 5
+
+    public void wypiszCos(){
+        System.out.println("Cześć nazywam się " + imie + " " + nazwisko);
+    }
+
+    public void wypiszCoś(String komunikat){
+        System.out.println("Cześć nazywam się " + imie + " " + nazwisko + ". " + komunikat + ".");
+    }
+
 
 }

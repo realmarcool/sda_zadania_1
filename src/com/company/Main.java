@@ -37,7 +37,7 @@ public class Main {
 
 //      Zadanie 4
 //
-//      Rozbudowa zadań: 1 , 2 i 3
+//      Rozbudowa zadań: 1, 2 i 3
 //
 //      Stworzyć klasę Człowiek, która będzie zawierała pola, imię, nazwisko
 //      Klasa człowiek powinna zawierać konstruktor publiczny, który będzie przyjmował wszystkie pola jako argumenty
@@ -52,6 +52,23 @@ public class Main {
         Czlowiek czlowiek2 = new Czlowiek("Adam", "Nowak");
         czlowiek1.zwierze = pies;
         czlowiek2.zwierze = kot;
+
+//      Zadanie 5
+//
+//      Rozbudowa zadań: 1 , 2 ,3 i 4
+//
+//      Do klasy Człowiek dodać nową metodę która będzie wypisywać : “ Cześć nazywam się [tutaj powinniśmy wypisać imię i nazwisko ]”
+//      Przeciążyć powyższą metodę, która będzie dodawała dodatkowy tekst, który będzie przyjmowany jako parametr metody.
+//      Przykład w parametrze metody przeciążonej podamy “Kocham zwierzęta”. Tekst, który zostanie wyświetlony to : “ Cześć
+//      nazywam się [tutaj powinniśmy wypisać imię i nazwisko ]. Kocham zwierzęta “
+//      W metodzie main wywołać:
+//      metodę w wersji “podstawowej” bez argumentów
+//      metodę w wersji “rozszerzonej” z argumentem np. “Kocham zwierzęta”
+
+        czlowiek1.wypiszCos();
+        czlowiek2.wypiszCoś("Kocham zwierzęta");
+
+        
 
 
     }
