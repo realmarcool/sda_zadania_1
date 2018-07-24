@@ -35,8 +35,23 @@ public class Main {
         pies.wypiszJestemZwierzem();
         kot.wypiszJestemZwierzem();
 
+//      Zadanie 4
+//
+//      Rozbudowa zadań: 1 , 2 i 3
+//
+//      Stworzyć klasę Człowiek, która będzie zawierała pola, imię, nazwisko
+//      Klasa człowiek powinna zawierać konstruktor publiczny, który będzie przyjmował wszystkie pola jako argumenty
+//      Stworzyć klasę Dane Adresowe, która będzie zawierała pola dotyczące adresu, numeru telefonu, maila itp.
+//      Do klasy Człowiek dodać dwa kolejne pola:
+//      Pole zwierzę, które będzie typu Zwierzę, Pole dane adresowe, które będzie typu Dane Adresowe
+//      W metodzie main, stworzyć dwa obiekty klasy Człowiek:
+//      Dla jednego obiektu w polu zwierzę przypisać obiekt klasy Pies(który został stworzony we wcześniejszych zadaniach)
+//      Dla drugiego obiektu w polu zwierzę przypisać obiekt klasy Kot(który został stworzony we wcześniejszych zadaniach)
 
-
+        Czlowiek czlowiek1 = new Czlowiek("Jan", "Kowalski");
+        Czlowiek czlowiek2 = new Czlowiek("Adam", "Nowak");
+        czlowiek1.zwierze = pies;
+        czlowiek2.zwierze = kot;
 
 
     }

@@ -4,12 +4,16 @@ package com.company;
 
 public class Kot extends Zwierze {
 
-//  Zadanie2
+//  Zadanie 2
 
     @Override
     public void wypiszJestemZwierzem() {
         System.out.println("Jestem koteł");
     }
+
+//  Zadanie 3
+    public RasyKotow rasa;
+
 
 
 

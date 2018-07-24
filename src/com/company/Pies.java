@@ -8,6 +8,12 @@ public class Pies extends Zwierze {
 
     @Override
     public void wypiszJestemZwierzem() {
-        System.out.println("Jesetem pieseł");
+        System.out.println("Jestem pieseł");
     }
+
+//  Zadanie 3
+    public RasyPsow rasa;
+
+
+
 }
