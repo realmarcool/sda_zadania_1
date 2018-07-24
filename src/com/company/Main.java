@@ -1,5 +1,10 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -68,7 +73,61 @@ public class Main {
         czlowiek1.wypiszCos();
         czlowiek2.wypiszCoś("Kocham zwierzęta");
 
-        
+//      Kategoria: Listy
+//
+//      Zadanie 6)
+//
+//      Wszystkie poniższe rzeczy wykonujemy w metodzie main
+//
+//      Stworzyć listę, która będzie zawierała elementy typu String
+//      Do listy dodajmy 10 elementy wykorzystując metodę add()
+//      Wyświetlamy listę za pomocą zwykłej pętli for
+//      Wyświetlamy listę za pomocą pętli foreach
+
+        List<String> lista1 = new ArrayList<>();
+        lista1.add("element1");
+        lista1.add("element2");
+        lista1.add("element3");
+        lista1.add("element4");
+        lista1.add("element5");
+        lista1.add("element6");
+        lista1.add("element7");
+        lista1.add("element8");
+        lista1.add("element9");
+        lista1.add("element10");
+
+        for(int i = 0; i < lista1.size(); i++){
+            System.out.println(lista1.get(i));
+        }
+        System.out.println("----------------------------------------");
+        for (String text: lista1) {
+            System.out.println(text);
+        }
+
+
+//      Zadanie 7
+//
+//      Stworzyć listę, która będzie zawierała elementy typu Integer
+//      Do listy dodajemy 15 elementów poprzez wykorzystanie Arrays.asList ()
+//      Wyświetlamy wszystkie elementy listy za pomocą foreach
+//      Wyświetlamy wielkość listy
+//      Usuwamy pierwszy i ostatni element listy
+//      Wyświetlamy wielkość listy
+
+
+        List<Integer> lista2 = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+        System.out.println("----------------------------------------");
+        for (int i: lista2){
+            System.out.println(i);
+        }
+        System.out.println("Wielkośc listy: " + lista2.size());
+        lista2.remove(0);                       //TO NIE DZIAŁA!!
+        lista2.remove(lista2.size()-1);         //I TO TEŻ!
+        System.out.println("Wielkośc listy: " + lista2.size());
+
+
+
+
 
 
     }
