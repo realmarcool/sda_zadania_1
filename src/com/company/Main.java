@@ -96,11 +96,11 @@ public class Main {
         lista1.add("element9");
         lista1.add("element10");
 
-        for(int i = 0; i < lista1.size(); i++){
+        for (int i = 0; i < lista1.size(); i++) {
             System.out.println(lista1.get(i));
         }
         System.out.println("----------------------------------------");
-        for (String text: lista1) {
+        for (String text : lista1) {
             System.out.println(text);
         }
 
@@ -115,20 +115,85 @@ public class Main {
 //      Wyświetlamy wielkość listy
 
 
-        List<Integer> lista2 = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+        List<Integer> lista2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
         System.out.println("----------------------------------------");
-        for (int i: lista2){
+        for (int i : lista2) {
             System.out.println(i);
         }
         System.out.println("Wielkośc listy: " + lista2.size());
-        lista2.remove(0);                       //TO NIE DZIAŁA!!
-        lista2.remove(lista2.size()-1);         //I TO TEŻ!
+        lista2.remove(0);
+        lista2.remove(lista2.size() - 1);
         System.out.println("Wielkośc listy: " + lista2.size());
 
 
+//      Zadanie 8
+//
+//      Tworzymy klasę Książka, która będzie zawierała pola tytuł, autor, liczba stron, wydawnictwo.
+//      Tworzymy 11 obiektów klasy Książka
+//      Dodajemy je do listy, która będzie przechowywać książki(sposób dodania dowolny)
+//      Wyświetlamy wszystkie elementy za pomocą System.out.println(...)
+//      Usuwamy środkowy element listy
+//      Wyświetlamy wszystkie elementy za pomocą System.out.println(...)
+//      Wyświetlamy wielkość listy
+//      Przechodzimy po liście(for, foreach) i wyświetlamy tylko książki, które mają powyżej 200 stron
 
+        Ksiazka ksiazka1 = new Ksiazka("tytul 1", "autor 1", 100, "wydawnictwo 1");
+        Ksiazka ksiazka2 = new Ksiazka("tytul 2", "autor 2", 120, "wydawnictwo 2");
+        Ksiazka ksiazka3 = new Ksiazka("tytul 3", "autor 3", 140, "wydawnictwo 3");
+        Ksiazka ksiazka4 = new Ksiazka("tytul 4", "autor 4", 160, "wydawnictwo 4");
+        Ksiazka ksiazka5 = new Ksiazka("tytul 5", "autor 5", 180, "wydawnictwo 5");
+        Ksiazka ksiazka6 = new Ksiazka("tytul 6", "autor 6", 200, "wydawnictwo 6");
+        Ksiazka ksiazka7 = new Ksiazka("tytul 7", "autor 7", 220, "wydawnictwo 7");
+        Ksiazka ksiazka8 = new Ksiazka("tytul 8", "autor 8", 240, "wydawnictwo 8");
+        Ksiazka ksiazka9 = new Ksiazka("tytul 9", "autor 9", 260, "wydawnictwo 9");
+        Ksiazka ksiazka10 = new Ksiazka("tytul 10", "autor 10", 280, "wydawnictwo 10");
+        Ksiazka ksiazka11 = new Ksiazka("tytul 11", "autor 11", 300, "wydawnictwo 11");
+        List<Ksiazka> listaKsiazek1 = new ArrayList<>(Arrays.asList(ksiazka1, ksiazka2, ksiazka3, ksiazka4, ksiazka5,
+                ksiazka6, ksiazka7, ksiazka8, ksiazka9, ksiazka10, ksiazka11));
+        System.out.println("-------------------------------------------");
+        System.out.println("Lista książek:");
+        for (Ksiazka wyswietl : listaKsiazek1) {
+            System.out.println(wyswietl);
+        }
+        System.out.println("-------------------------------------------");
+        System.out.println("Lista książek po usunięciu środkowej pozycji:");
+        listaKsiazek1.remove(5);
+        for (Ksiazka wyswietl : listaKsiazek1) {
+            System.out.println(wyswietl);
+        }
+        System.out.println("Wielkość listy książek: " + listaKsiazek1.size());
+        System.out.println("-------------------------------------------");
+        System.out.println("Lista książek mających powyżej 200 stron:");
+        for (Ksiazka wyswietl : listaKsiazek1) {
+            if (wyswietl.liczbaStron > 200) {
+                System.out.println(wyswietl);
+            }
+        }
 
+//      Zadanie 9
+//
+//      Rozbudowa zadania : 8
+//
+//      Tworzymy drugą listę która będzie również zawierać książki
+//      Dodajemy do tej listy 4 obiekty klasy Książka
+//      Powinniśmy mieć 2 listy jedna z zadania 8, która posiada 10 obiektów i drugą która posiada 4 elementy
+//      Do listy, która posiada 10 elementów dodajemy naszą drugą listę(która ma 4 elementy). Wykorzystujemy do tego metodę addAll(...)
+//      Wyświetlamy wielkość listy
+//      Wyświetlamy wszystkie elementy listy.
 
+        Ksiazka ksiazka12 = new Ksiazka("tytul 12", "autor 12", 300, "wydawnictwo 12");
+        Ksiazka ksiazka13 = new Ksiazka("tytul 13", "autor 13", 320, "wydawnictwo 13");
+        Ksiazka ksiazka14 = new Ksiazka("tytul 14", "autor 14", 340, "wydawnictwo 14");
+        Ksiazka ksiazka15 = new Ksiazka("tytul 15", "autor 15", 360, "wydawnictwo 15");
+        List<Ksiazka> listaKsiazek2 = new ArrayList<>(Arrays.asList(ksiazka12, ksiazka13, ksiazka14, ksiazka15));
+        listaKsiazek1.addAll(listaKsiazek2);
+        System.out.println("-------------------------------------------");
+        System.out.println("Lista książek po dodaniu czterech książek ma wielkość: " + listaKsiazek1.size());
+        for (Ksiazka wyswietl : listaKsiazek1) {
+            System.out.println(wyswietl);
+        }
+
+        
 
     }
 }
