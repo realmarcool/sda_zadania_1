@@ -230,7 +230,7 @@ public class Main {
         Set<String> slowa = new HashSet<>();
         String slowo;
         Palindrom palindrom = new Palindrom();
-        System.out.println("--------------------------------------------");
+        System.out.println("\n--------------------------------------------");
         System.out.println("Podaj frazę lub napisz END aby zakończyć");
         do {
             slowo = pobierz.nextLine();
