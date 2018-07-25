@@ -12,13 +12,6 @@ public class Kot extends Zwierze {
     }
 
 //  Zadanie 3
-    public RasyKotow rasa;
-
-
-
-
-
-
-
+    RasyKotow rasa;
 
 }

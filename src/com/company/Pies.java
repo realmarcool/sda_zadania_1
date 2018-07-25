@@ -12,8 +12,6 @@ public class Pies extends Zwierze {
     }
 
 //  Zadanie 3
-    public RasyPsow rasa;
-
-
+    RasyPsow rasa;
 
 }
