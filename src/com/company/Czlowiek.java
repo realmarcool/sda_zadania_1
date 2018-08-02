@@ -4,6 +4,7 @@ public class Czlowiek {
 
 //  Zadanie 4
 
+    //TODO pola powinny być prywatne
     String imie;
     String nazwisko;
     Zwierze zwierze;

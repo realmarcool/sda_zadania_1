@@ -12,6 +12,9 @@ public class Kot extends Zwierze {
     }
 
 //  Zadanie 3
+    //TODO pola powinny być prywatne
     RasyKotow rasa;
+
+    //TODO brak konstruktora
 
 }

@@ -12,6 +12,9 @@ public class Pies extends Zwierze {
     }
 
 //  Zadanie 3
+    //TODO pola powinny być prywatne
     RasyPsow rasa;
+
+    //TODO brak konstruktora
 
 }

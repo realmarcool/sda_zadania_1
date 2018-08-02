@@ -12,6 +12,7 @@ public class Ksiazka {
 //    Przechodzimy po liście(for, foreach) i wyświetlamy tylko książki, które mają powyżej
 //200 stron
 
+    //TODO pola powinny być prywatne
     String tytul;
     String autor;
     int liczbaStron;

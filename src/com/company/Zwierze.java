@@ -3,9 +3,12 @@ package com.company;
 //  Zadanie 1
 
 public class Zwierze {
+
+    //TODO pola powinny być prywatne
     String imie;
     int wiek;
 
+    //TODO po co pusty konstruktor ?
     public Zwierze(){
         imie = "";
         wiek = 0;
