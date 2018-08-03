@@ -11,10 +11,12 @@ public class Pies extends Zwierze {
         System.out.println("Jestem pieseł");
     }
 
-//  Zadanie 3
-    //TODO pola powinny być prywatne
-    RasyPsow rasa;
+    //  Zadanie 3
+    private RasyPsow rasa;
 
-    //TODO brak konstruktora
+    public Pies(String imie, int wiek, RasyPsow rasa){
+        super(imie, wiek);
+        this.rasa = rasa;
+    }
 
 }

@@ -4,15 +4,16 @@ public class Czlowiek {
 
 //  Zadanie 4
 
-    //TODO pola powinny być prywatne
-    String imie;
-    String nazwisko;
-    Zwierze zwierze;
-    DaneAdresowe daneAdresowe;
+    private String imie;
+    private String nazwisko;
+    private Zwierze zwierze;
+    private DaneAdresowe daneAdresowe;
 
-    public Czlowiek(String imie, String nazwisko){
+
+    public Czlowiek(String imie, String nazwisko, Zwierze zwierze){
         this.imie = imie;
         this.nazwisko = nazwisko;
+        this.zwierze = zwierze;
     }
 
 //  Zadanie 5

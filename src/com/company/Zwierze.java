@@ -4,15 +4,8 @@ package com.company;
 
 public class Zwierze {
 
-    //TODO pola powinny być prywatne
-    String imie;
-    int wiek;
-
-    //TODO po co pusty konstruktor ?
-    public Zwierze(){
-        imie = "";
-        wiek = 0;
-    }
+    private String imie;
+    private int wiek;
 
     public Zwierze(String imie, int wiek){
         this.imie = imie;
@@ -29,10 +22,4 @@ public class Zwierze {
     public void wypiszJestemZwierzem(){
         System.out.println("Jestem zwierzę");
     }
-
-
-
-
-
-
 }

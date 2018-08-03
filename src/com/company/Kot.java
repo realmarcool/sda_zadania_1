@@ -11,10 +11,12 @@ public class Kot extends Zwierze {
         System.out.println("Jestem koteł");
     }
 
-//  Zadanie 3
-    //TODO pola powinny być prywatne
-    RasyKotow rasa;
+    //  Zadanie 3
+    private RasyKotow rasa;
 
-    //TODO brak konstruktora
+    public Kot(String imie, int wiek, RasyKotow rasa){
+        super(imie, wiek);
+        this.rasa = rasa;
+    }
 
 }

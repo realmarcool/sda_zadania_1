@@ -12,25 +12,24 @@ public class Ksiazka {
 //    Przechodzimy po liście(for, foreach) i wyświetlamy tylko książki, które mają powyżej
 //200 stron
 
-    //TODO pola powinny być prywatne
-    String tytul;
-    String autor;
-    int liczbaStron;
-    String wydawnictwo;
+    private String tytul;
+    private String autor;
 
-    Ksiazka(String t, String a, int ls, String w){
-        tytul = t;
-        autor = a;
-        liczbaStron = ls;
-        wydawnictwo = w;
+    public int getLiczbaStron() {
+        return liczbaStron;
+    }
+
+    private int liczbaStron;
+    private String wydawnictwo;
+
+    Ksiazka(String tytul, String autor, int liczbaStrons, String wydawnictwo){
+        this.tytul = tytul;
+        this.autor = autor;
+        this.liczbaStron = liczbaStrons;
+        this.wydawnictwo = wydawnictwo;
     }
     @Override
     public String toString(){
         return "Tytuł książki: " + tytul + ", autor: " + autor + ", liczba stron: " + liczbaStron + ", wydawnictwo: " + wydawnictwo;
     }
-
-
-
-
-
 }

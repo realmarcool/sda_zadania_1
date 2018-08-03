@@ -4,10 +4,13 @@ public class DaneAdresowe {
 
 //  Zadanie 4
 
-    //TODO pola powinny być prywatne
-    String adres;
-    String numerTelefonu;
-    String mail;
+    private String adres;
+    private String numerTelefonu;
+    private String mail;
 
-    //TODO brak konstruktora
+    public DaneAdresowe(String adres, String  numerTelefonu, String mail){
+        this.adres = adres;
+        this.numerTelefonu = numerTelefonu;
+        this.mail = mail;
+    }
 }

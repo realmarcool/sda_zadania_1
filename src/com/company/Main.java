@@ -19,13 +19,8 @@ public class Main {
 //      W klasie Zwierze dodać metodę toString()
 //      W metodzie main stworzyć jeden obiekt klasy Pies i jeden obiekt klasy Kot i wypisać je na ekran.
 
-        Pies pies = new Pies();
-        Kot kot = new Kot();
-        //TODO zaleca się pola klasy uzupełniać podczas tworzenia obiektu czyli w konstruktorze
-        kot.imie = "kicia";
-        kot.wiek = 10;
-        pies.imie = "burek";
-        pies.wiek = 15;
+        Pies pies = new Pies("burek", 14, RasyPsow.BULDOG);
+        Kot kot = new Kot("kicia", 10, RasyKotow.DOMOWY);
         System.out.println(kot);
         System.out.println(pies);
 
@@ -53,11 +48,8 @@ public class Main {
 //      Dla jednego obiektu w polu zwierzę przypisać obiekt klasy Pies(który został stworzony we wcześniejszych zadaniach)
 //      Dla drugiego obiektu w polu zwierzę przypisać obiekt klasy Kot(który został stworzony we wcześniejszych zadaniach)
 
-        //TODO zwierze mogłoby być dodadane poprzez konstruktor
-        Czlowiek czlowiek1 = new Czlowiek("Jan", "Kowalski");
-        Czlowiek czlowiek2 = new Czlowiek("Adam", "Nowak");
-        czlowiek1.zwierze = pies;
-        czlowiek2.zwierze = kot;
+        Czlowiek czlowiek1 = new Czlowiek("Jan", "Kowalski", pies);
+        Czlowiek czlowiek2 = new Czlowiek("Adam", "Nowak", kot);
 
 //      Zadanie 5
 //
@@ -158,7 +150,7 @@ public class Main {
         }
         System.out.println("-------------------------------------------");
         System.out.println("Lista książek po usunięciu środkowej pozycji:");
-        listaKsiazek1.remove(5); //TODO A co jeśli wielkość listy się zmieni ? To środek już nie będzie 5
+        listaKsiazek1.remove(listaKsiazek1.size()/2);
         for (Ksiazka wyswietl : listaKsiazek1) {
             System.out.println(wyswietl);
         }
@@ -166,7 +158,7 @@ public class Main {
         System.out.println("-------------------------------------------");
         System.out.println("Lista książek mających powyżej 200 stron:");
         for (Ksiazka wyswietl : listaKsiazek1) {
-            if (wyswietl.liczbaStron > 200) {
+            if (wyswietl.getLiczbaStron() > 200) {
                 System.out.println(wyswietl);
             }
         }
